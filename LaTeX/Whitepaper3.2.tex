@@ -173,7 +173,7 @@ in the largest pools. We show that this is quite consistent with the
 effect of the current incentive parameters detailed in the previous
 two sections. At the end, we develop a rough estimate of rewards based
 only on very synthetic statistics extracted from the distribution
-of the pool (see Figure \ref{fig: stakepledgebyclass}), and check
+of the pool (see Figure \ref{fig_stakepledgebyclass}), and check
 that this is in line with the actual aggregate rewards, providing
 some further explanation about the core determinants of pool composition
 and aggregate rewards.\medskip{}
@@ -188,11 +188,11 @@ the actual partition between Treasury increases and Rewards. In reality,
 due to the fraction which is retained from Rewards distribution, mostly
 as an incentive to grow stake and pledge or to rescale rewards by
 the active stake, the actual release has been between $0.165\%$ and
-$0.185\%$ rather than $0.3\%$, as shown in Figure \ref{actual and simplified reserves}.
+$0.185\%$ rather than $0.3\%$, as shown in Figure \ref{actual_and_simplified_reserves}.
 Additionally, while based on $\tau$ only Rewards should receive $1-\tau=80\%$
 of the release, they actually got just between $65\%$ and $70\%$,
 with Treasury taking a fraction between $30\%$ and $35\%$, as shown
-in Figure \ref{rewards and treasury} Thus the proportion between
+in Figure \ref{rewards_and_treasury} Thus the proportion between
 the growth of Treasury and the Rewards, that could be expected to
 be $\frac{\tau}{1-\tau}=25\%$, has often been more than $50\%.$
 These effect can be broken down further, to calculate how Reserves
@@ -259,11 +259,14 @@ for delegators, but in the reward system smaller pools are implicitly
 incentivized to increase their stake by increasing first delegated
 stake, rather than own stake.
 
-\begin{figure}[!h]
-\label{stakepledgesimple}\hspace{-0.7cm}\hspace{-0.7cm}\includegraphics{figures/rewardswithstakepledgesimple}\caption{\textbf{Rewards for different Stake and Pledge}. Stakes are represented
+\begin{figure}[!ht]
+\hspace{-0.7cm}\hspace{-0.7cm}
+\includegraphics{figures/rewardswithstakepledgesimple}
+\caption{\textbf{Rewards for different Stake and Pledge}. Stakes are represented
 as fractions of saturation level ($S/k$), Rewards as fractions of
 the maximum Reward ($1/k$ of the available rewards), Pledge as a
 fraction of the Stake.}
+\label{stakepledgesimple}
 \end{figure}
 
 \textbf{Description}. Pools with no pledge are penalized by considering
@@ -423,7 +426,7 @@ saturation stake, therefore changing the reference size that affects
 the behavior of $a_{0}$. Furthermore, the saturation stake is also
 the maximum size above which rewards are terminated. 
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \label{rewforstakepledge}\medskip{}
 
 \begin{tabular}{cc}
@@ -480,7 +483,7 @@ the rewards become uniformly increasing with pledge. Indeed, at $\sigma_{\%}=$50
 the first derivative crosses the x-axis and becomes negative only
 at at 1, that is 100\% pledge. 
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \label{deriv}%
 \begin{tabular}{cc}
 \includegraphics[width=7cm,height=5cm]{figures/pledgederivative_sig0\lyxdot 01} & \includegraphics[width=7cm,height=5cm]{figures/pledgederivative_sig0\lyxdot 1}\tabularnewline
@@ -619,11 +622,12 @@ to the volatility of aggregate rewards over time, with even an upward
 jump after epoch 325,\footnote{Jumps in staking are usually associated to large players, such as
 exchanges, starting or terminating their participation in staking.} and a smoother but bigger decline after epoch 400.
 
-\begin{figure}[!h]
-\label{fandp}\includegraphics[scale=0.98]{./figures/f_and_p.eps}\caption{\textbf{Reward adjustment f and p in practice }The chart shows $p$
+\begin{figure}[!ht]
+\includegraphics[scale=0.98]{./figures/f_and_p.eps}\caption{\textbf{Reward adjustment f and p in practice }The chart shows $p$
 and $f$ as extracted from the actual level of rewards, beside the
 leading term in $f$, $\frac{1}{1+a_{0}}\approx77\%$, and the active
 stake component of $p$.}
+\label{fandp}
 \end{figure}
 
 We can also distinguish the effects on $p$ of variations in active
@@ -699,12 +703,13 @@ to pools with no pledge needs to be rooted in the distribution of
 the staking pools during the period. We analyze this in the following,
 keeping the analysis simple and based on few basic statistics. 
 
-\begin{figure}[!h]
-\label{fig: average median pools}\includegraphics[scale=0.7]{figures/stakepledgemeanmedian}\caption{\textbf{Average and Median Stake and Pledge. }The figure covers the
+\begin{figure}[!ht]
+\includegraphics[scale=0.7]{figures/stakepledgemeanmedian}\caption{\textbf{Average and Median Stake and Pledge. }The figure covers the
 period from epoch 311-470.}
+\label{fig_average_median_pools}
 \end{figure}
 
-\textbf{Statistics}. We see in Figure \ref{fig: average median pools}
+\textbf{Statistics}. We see in Figure \ref{fig_average_median_pools}
 that the average pool had a stake between 7 and 8 Million ADA. The
 average pledge was around 1.5 Million ADA. This amount of own tokens
 is not very high, but it is significantly above zero. We know from
@@ -719,7 +724,7 @@ help understand the real distribution of the pools in terms of stake
 and pledge size. 
 
 Let's build slightly more granular, and more targeted, statistics.
-In Figure \eqref{fig: pools by stake} the upper chart shows how the
+In Figure \eqref{fig_pools_by_stake} the upper chart shows how the
 stake has been distributed across different classes of stake,
 \[
 \left[0-7M\right],\left[7M-14M\right],\left[14M-21M\right]...\left[63M-70M\right],\left[70M-77M\right].
@@ -740,8 +745,8 @@ number of pools in this class grows with the increase of the saturation
 stake to 70M and above. Any higher stake has been added to this last
 class, considering that no additional rewards are given to pools larger
 than saturation. 
-\begin{figure}[!h]
-\label{fig: pools by stake}\medskip{}
+\begin{figure}[!ht]
+\medskip{}
 
 \begin{tabular}{c}
 \includegraphics[scale=0.44]{figures/stakebyrange}\tabularnewline
@@ -750,6 +755,7 @@ than saturation.
 the upper chart we see the stake in each class as a percentage of
 the stake in all classes. Below, we see the pledge in a class as a
 fraction of the Stake in the class.}
+\label{fig_pools_by_stake}
 \end{figure}
 
 The dynamics of all classes of stake during the period shows a rather
@@ -761,7 +767,7 @@ as the saturation level increased, passing $70M$ due to the growth
 of circulating supply. Yet, in the last year or so, no cohort contained
 more than 20\% of the active stake. 
 
-In Figure \ref{fig: pools by stake}, the lower chart shows how the
+In Figure \ref{fig_pools_by_stake}, the lower chart shows how the
 pledge has been distributed across the above classes of stake, measured
 a percentage of the class stake. We notice larger percentage pledge
 for the class containing the smallest pools, and for those containing
@@ -793,11 +799,10 @@ same percentage pledge. This is likely to be an overestimate as well,
 since pledge has for all but the largest, saturated pools, a less
 than linear impact on rewards. We can even apply this logic to the
 time average of stake and pledge across the whole period, which is
-shown in the upper chart of Figure \ref{fig: stakepledgebyclass}.
+shown in the upper chart of Figure \ref{fig_stakepledgebyclass}.
 The histogram corresponds to the following table:
 
-%% TODO: This file is missing
-%\hspace{-0.85cm}\includegraphics[scale=0.66]{./figures/pools_histogram_table.eps}
+\hspace{-0.85cm}\includegraphics[scale=0.66]{./figures/pools_histogram_table.eps}
 
 This shows that on average, across the period the 0-7M class held
 6.3\% of the stake, while pledge in the class was on average 63.1\%
@@ -810,15 +815,13 @@ amount of rewards as a percentage of the maximum ($\frac{1}{k}$ of
 the total rewards). Since we know that the first class weighted for
 6.3\% of the stake, the second one for 7.1\% and so on, then we can
 compute a weighted average. This is shown in the lower chart of Figure
-\ref{fig: stakepledgebyclass}, where it is compared to the $76.9\%%\ensuremath{=\frac{1}{1+a_{0}}}
+\ref{fig_stakepledgebyclass}, where it is compared to the $76.9\%%\ensuremath{=\frac{1}{1+a_{0}}}
 $ earned by pools with no pledge. Because of the time average, this
 rough estimate is not necessarily an overestimate, yet we obtain $78.6\%$,
 which is consistent with the $f_{i}$ values in Figure \ref{fandp}
 showing that the aggregate incentive adjustment was within $2\%$
 of the minimum. 
 \begin{figure}[H]
-\label{fig: stakepledgebyclass}
-
 \medskip{}
 \begin{tabular}{c}
 \includegraphics[scale=0.78]{./figures/average_by_class.eps}\tabularnewline
@@ -826,6 +829,7 @@ of the minimum.
 \end{tabular}\caption{\textbf{Stake and Pledge Statistics and Reward Estimates. }In the
 upper chart we see the time-averages of stake and pledge. Below, we
 see estimates of the reward percentages.}
+\label{fig_stakepledgebyclass}
 \end{figure}
 
 However rough, this statistic support the assumption that the current
@@ -908,13 +912,14 @@ rather than just $\left(1-\tau\right)$ changes the actual proportions.
 \begin{figure}[H]
 \bigskip{}
 
-\label{rewards and treasury}\hspace{-0.2cm}%
+\hspace{-0.2cm}%
 \begin{tabular}{cc}
 \includegraphics[scale=0.46]{./figures/actualvssimplified_rewards_and_treasury.eps} & \includegraphics[scale=0.46]{./figures/actualvssimplified_trerew_ratio.eps}\tabularnewline
 \end{tabular}\caption{\textbf{Actual vs Theoretical Rewards and Treasury}}
+\label{rewards_and_treasury}
 \end{figure}
 
-Look at Figure \ref{rewards and treasury}. On the left we see that,
+Look at Figure \ref{rewards_and_treasury}. On the left we see that,
 rather than $80\%$ of the release, Rewards have been between a bit
 less than 65\% and little more than 70\%, with Treasury taking a fraction
 approximately between $30\%$ and $35\%$. Thus, as we see on the
@@ -923,7 +928,7 @@ that in principle should be $\frac{\tau}{1-\tau}=25\%$, has often
 been more than 50\%. 
 
 A more precise description of the effect of rewards adjustments is
-given in Figure \ref{rewards and treasury-1}, that breaks down the
+given in Figure \ref{rewards_and_treasury_1}, that breaks down the
 effect for $f_{i}$ and $p_{i}$. We can see that without incentives,
 equivalent to setting $f_{i}=1$, but with the $p_{i}$ rescaling,
 rewards would be be nearer to the theoretical value of $80\%$, and
@@ -936,17 +941,18 @@ unreturned deposits, that are rather small and not represented explicitly
 here. 
 
 \begin{figure}[H]
-\label{rewards and treasury-1}\smallskip{}
+\smallskip{}
 
 \includegraphics[scale=0.88]{./figures/actualvssimplified_rewards_and_treasury_breakdown.eps}
 \caption{\textbf{Rewards and Treasury. Breakdown of Adjustments.} }
+\label{rewards_and_treasury_1}
 \end{figure}
 
 What happens to the amounts which are not paid out as Rewards? They
 stay with the Reserves, making the actual release lower than the one
 dictated by the monetary expansion parameter $\rho$. This is another
 difference between simplified descriptions of the tokenomics and the
-reality. In Figure \ref{actual and simplified reserves}, left chart,
+reality. In Figure \ref{actual_and_simplified_reserves}, left chart,
 we see the actual dynamics Reserves had in the last few years, compared
 to the predictions of simplified representations, where the $f_{i},p_{i}$,
 and potentially also the $\eta_{i}$ adjustment are ignored. The difference
@@ -958,12 +964,12 @@ as well leads only to an additional difference of little more than
 100M ADA. 
 
 \begin{figure}[H]
-\label{actual and simplified reserves}\medskip{}
-
 \hspace{-0.2cm}%
 \begin{tabular}{cc|}
 \includegraphics[scale=0.47]{./figures/actual_and_simplified_reserves.eps} & \includegraphics[scale=0.47]{./figures/actualvssimplified_eta.eps}\tabularnewline
-\end{tabular}\caption{\textbf{Actual Reserves vs Simplifications}}
+\end{tabular}
+\caption{\textbf{Actual Reserves vs Simplifications}}
+\label{actual_and_simplified_reserves}\medskip{}
 \end{figure}
 
 This clarifies that the release from Reserves does not happen at a
@@ -971,7 +977,7 @@ fixed rate equal to $\rho=0.3\%$ but at a variable rate, lower than
 $\rho$ and ranging, in the period analyzed, between $0.165\%$ and
 $0.185\%$. This means that in some cases the reward adjustments can
 make the release be only little more than half of the theoretical
-value, as we can see in the right chart of Figure \ref{actual and simplified reserves}. 
+value, as we can see in the right chart of Figure \ref{actual_and_simplified_reserves}. 
 
 Taking into account also the impact of $f_{i}$ and $p_{i}$, the
 formula for the update of Reserves become much more complicated, since
@@ -982,7 +988,7 @@ returning to Reserves, including a component from fees $F_{i}$:
  & =\mathrm{Reserve}_{i-1}\left(1-\rho\eta_{i}\left(\tau-\left(1-\tau\right)p_{i}f_{i}\right)\right)+\left(1-\tau\right)F_{i}\left(1-p_{i}f_{i}\right)
 \end{align*}
 
-\begin{figure}[h]
+\begin{figure}[ht]
 
 \includegraphics[scale=0.8]{"./figures/actual_and_approximated_reserves.eps"}
 \caption{\textbf{Actual Reserves vs Near Approximations}}
