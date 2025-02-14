@@ -21,7 +21,7 @@ jobs:
       # Step 3: Find and convert LaTeX files to Markdown
       - name: 📝 Convert LaTeX to Markdown
         run: |
-          pandoc LaTeX/Whitepaper3.2.tex -s -o markdown/whitepaper.md
+          cd ./LaTeX && pandoc Whitepaper3.2.tex -s -f latex -t gfm --wrap=none --extract-media=./figures --mathjax -o ../markdown/whitepaper.md
           
 
       # Step 4: Commit and push the converted Markdown files

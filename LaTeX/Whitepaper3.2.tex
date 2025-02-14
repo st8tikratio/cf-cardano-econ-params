@@ -314,7 +314,7 @@ $k$ has to be determined jointly to balance these different aspects.
 The effect of $a_{0}$ and $k$ on the rewards of a pool depends on
 the incentive formula
 \begin{equation}
-f\left(\alpha,z,\sigma,\lambda\right)=\frac{1}{1+\alpha}\left(\sigma+\alpha\lambda\frac{\sigma-\lambda\frac{z-\sigma}{z}}{z}\right),\label{eq:incentive formula}
+f\left(\alpha,z,\sigma,\lambda\right)=\frac{1}{1+\alpha}\left(\sigma+\alpha\lambda\frac{\sigma-\lambda\frac{z-\sigma}{z}}{z}\right),\label{eq:incentive_formula}
 \end{equation}
 where we assume that pools are not saturated, but for simplicity do
 not write this constraint explicitly. In this formula, $\alpha=a_{0}$
@@ -486,8 +486,8 @@ at at 1, that is 100\% pledge.
 \begin{figure}[!ht]
 \label{deriv}%
 \begin{tabular}{cc}
-\includegraphics[width=7cm,height=5cm]{figures/pledgederivative_sig0\lyxdot 01} & \includegraphics[width=7cm,height=5cm]{figures/pledgederivative_sig0\lyxdot 1}\tabularnewline
-\includegraphics[width=7cm,height=5cm]{figures/pledgederivative_sig0\lyxdot 2} & \includegraphics[width=7cm,height=5cm]{figures/pledgederivative_sig0\lyxdot 5}\tabularnewline
+\includegraphics[width=7cm,height=5cm]{figures/pledgederivative_sig0.01.png} & \includegraphics[width=7cm,height=5cm]{figures/pledgederivative_sig0.1.png}\tabularnewline
+\includegraphics[width=7cm,height=5cm]{figures/pledgederivative_sig0.2.png} & \includegraphics[width=7cm,height=5cm]{figures/pledgederivative_sig0.5.png}\tabularnewline
 \end{tabular}\caption{\textbf{Behavior of Rewards with pledge and its 1st derivative. }Showing
 different cases for different $\sigma_{\%},$ i.e. different stakes
 expressed as fixed percentages of saturation, showing in each chart
@@ -498,7 +498,7 @@ $\lambda_{\%}$ of pledge.}
 
 \section{The effect of Stake definitions}
 
-The incentives emerging from the application of \eqref{eq:incentive formula}
+The incentives emerging from the application of \eqref{eq:incentive_formula}
 to all pools are not the last adjustment made to available resources
 before paying them out as rewards. As \citet{webdocgeneral} says,
 ``the rewards that are produced by this formula are now adjusted
@@ -515,7 +515,7 @@ Let us define this final adjustment precisely. It consists of multiplying
 the output of the incentive formula for a pool $x$, with a stake
 of $stake^{x}$ ADA, by 
 \begin{equation}
-\frac{N^{x}}{N}\frac{active}{stake^{x}}\label{eq:second adjustment}
+\frac{N^{x}}{N}\frac{active}{stake^{x}}\label{eq:second_adjustment}
 \end{equation}
 where $N^{x}$ the number of blocks produced by the pool $x$, $N$
 is the total number of blocks given by the sum of $N^{x}$ for all
@@ -528,12 +528,12 @@ to the consensus protocol, in an idealized setting where all pools
 operate with perfect efficiency and the realization of randomness
 matches probabilistic expectations, the pool's fraction of blocks
 $\frac{N^{x}}{N}$ would track the pool's fraction of stake $\frac{stake^{x}}{active}$
-and \eqref{eq:second adjustment} would be very near to 1. In practice,
+and \eqref{eq:second_adjustment} would be very near to 1. In practice,
 this remains true on average.
 
 Yet, introducing explicitly the pool performance and the active stake
 in the adjustments helps us understand them better. We saw in Section
-1 that the incentive formula \eqref{eq:incentive formula} depends
+1 that the incentive formula \eqref{eq:incentive_formula} depends
 on the relative stake defined as a fraction $\sigma=\frac{stake^{x}}{S}$
 of the total stake or circulating supply $S$. This definition of
 the weight of a pool used for rewards is different from the one used
@@ -623,7 +623,7 @@ jump after epoch 325,\footnote{Jumps in staking are usually associated to large 
 exchanges, starting or terminating their participation in staking.} and a smoother but bigger decline after epoch 400.
 
 \begin{figure}[!ht]
-\includegraphics[scale=0.98]{./figures/f_and_p.eps}\caption{\textbf{Reward adjustment f and p in practice }The chart shows $p$
+\includegraphics[scale=0.98]{./figures/f_and_p.png}\caption{\textbf{Reward adjustment f and p in practice }The chart shows $p$
 and $f$ as extracted from the actual level of rewards, beside the
 leading term in $f$, $\frac{1}{1+a_{0}}\approx77\%$, and the active
 stake component of $p$.}
@@ -802,7 +802,7 @@ time average of stake and pledge across the whole period, which is
 shown in the upper chart of Figure \ref{fig_stakepledgebyclass}.
 The histogram corresponds to the following table:
 
-\hspace{-0.85cm}\includegraphics[scale=0.66]{./figures/pools_histogram_table.eps}
+\hspace{-0.85cm}\includegraphics[scale=0.66]{./figures/pools_histogram_table.png}
 
 This shows that on average, across the period the 0-7M class held
 6.3\% of the stake, while pledge in the class was on average 63.1\%
@@ -824,8 +824,8 @@ of the minimum.
 \begin{figure}[H]
 \medskip{}
 \begin{tabular}{c}
-\includegraphics[scale=0.78]{./figures/average_by_class.eps}\tabularnewline
-\includegraphics[scale=0.78]{./figures/estimate_by_class.eps}\tabularnewline
+\includegraphics[scale=0.78]{./figures/average_by_class.png}\tabularnewline
+\includegraphics[scale=0.78]{./figures/estimate_by_class.png}\tabularnewline
 \end{tabular}\caption{\textbf{Stake and Pledge Statistics and Reward Estimates. }In the
 upper chart we see the time-averages of stake and pledge. Below, we
 see estimates of the reward percentages.}
@@ -914,7 +914,7 @@ rather than just $\left(1-\tau\right)$ changes the actual proportions.
 
 \hspace{-0.2cm}%
 \begin{tabular}{cc}
-\includegraphics[scale=0.46]{./figures/actualvssimplified_rewards_and_treasury.eps} & \includegraphics[scale=0.46]{./figures/actualvssimplified_trerew_ratio.eps}\tabularnewline
+\includegraphics[scale=0.46]{./figures/actualvssimplified_rewards_and_treasury.png} & \includegraphics[scale=0.46]{./figures/actualvssimplified_trerew_ratio.png}\tabularnewline
 \end{tabular}\caption{\textbf{Actual vs Theoretical Rewards and Treasury}}
 \label{rewards_and_treasury}
 \end{figure}
@@ -943,7 +943,7 @@ here.
 \begin{figure}[H]
 \smallskip{}
 
-\includegraphics[scale=0.88]{./figures/actualvssimplified_rewards_and_treasury_breakdown.eps}
+\includegraphics[scale=0.88]{./figures/actualvssimplified_rewards_and_treasury_breakdown.png}
 \caption{\textbf{Rewards and Treasury. Breakdown of Adjustments.} }
 \label{rewards_and_treasury_1}
 \end{figure}
@@ -966,7 +966,7 @@ as well leads only to an additional difference of little more than
 \begin{figure}[H]
 \hspace{-0.2cm}%
 \begin{tabular}{cc|}
-\includegraphics[scale=0.47]{./figures/actual_and_simplified_reserves.eps} & \includegraphics[scale=0.47]{./figures/actualvssimplified_eta.eps}\tabularnewline
+\includegraphics[scale=0.47]{./figures/actual_and_simplified_reserves.png} & \includegraphics[scale=0.47]{./figures/actualvssimplified_eta.png}\tabularnewline
 \end{tabular}
 \caption{\textbf{Actual Reserves vs Simplifications}}
 \label{actual_and_simplified_reserves}\medskip{}
@@ -990,7 +990,7 @@ returning to Reserves, including a component from fees $F_{i}$:
 
 \begin{figure}[ht]
 
-\includegraphics[scale=0.8]{"./figures/actual_and_approximated_reserves.eps"}
+\includegraphics[scale=0.8]{"./figures/actual_and_approximated_reserves.png"}
 \caption{\textbf{Actual Reserves vs Near Approximations}}
 \label{actual and approximated reserves}\smallskip{}
 \end{figure}
