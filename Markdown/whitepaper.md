@@ -39,7 +39,7 @@ Here we focus on the effect of a change of the parameters $`k`$, called ’desir
 **Pool Pledge Influence**. Documentation in explains that, if $`a_{0}`$ is zero, the pool reward is proportional to the pool’s fraction of the total possible stake (up to the point of saturation), while for larger values of $`a_{0}`$, the pledge becomes more important. We show here that the effect of $`a_{0}`$, and therefore the incentives to increase the pledge, are different for pools of different size, and they are aimed mostly at pools that already have a stake near to the desired saturation stake. Small pools receive little or no additional rewards for increasing the pledge, as shown in Figure <a href="#stakepledgesimple" data-reference-type="ref" data-reference="stakepledgesimple">1</a>. Increasing the pledge displays the commitment of pool operators and makes all pools more attractive for delegators, but in the reward system smaller pools are implicitly incentivized to increase their stake by increasing first delegated stake, rather than own stake.
 
 <figure id="stakepledgesimple">
-<img src="./figures/figures/rewardswithstakepledgesimple.png" />
+<img src="figures/rewardswithstakepledgesimple.png" />
 <figcaption><strong>Rewards for different Stake and Pledge</strong>. Stakes are represented as fractions of saturation level (<span class="math inline">\(S/k\)</span>), Rewards as fractions of the maximum Reward (<span class="math inline">\(1/k\)</span> of the available rewards), Pledge as a fraction of the Stake.</figcaption>
 </figure>
 
@@ -102,12 +102,12 @@ and increasing the pledge till $`100\%`$ of the stake increases the rewards perc
 <table>
 <tbody>
 <tr>
-<td style="text-align: center;"><img src="./figures/figures/stakepledge_all.png" alt="image" /></td>
-<td style="text-align: center;"><img src="./figures/figures/stakepledge_small.png" alt="image" /></td>
+<td style="text-align: center;"><img src="figures/stakepledge_all.png" alt="image" /></td>
+<td style="text-align: center;"><img src="figures/stakepledge_small.png" alt="image" /></td>
 </tr>
 <tr>
-<td style="text-align: center;"><img src="./figures/figures/stakepledge_mid.png" alt="image" /></td>
-<td style="text-align: center;"><img src="./figures/figures/stakepledge_large.png" alt="image" /></td>
+<td style="text-align: center;"><img src="figures/stakepledge_mid.png" alt="image" /></td>
+<td style="text-align: center;"><img src="figures/stakepledge_large.png" alt="image" /></td>
 </tr>
 </tbody>
 </table>
@@ -132,12 +132,12 @@ This means that rewards grow with $`\lambda_{\%}`$ until $`\lambda_{\%}=\lambda_
 <table>
 <tbody>
 <tr>
-<td style="text-align: center;"><img src="./figures/figures/pledgederivative_sig0.01.png" style="width:7cm;height:5cm" alt="image" /></td>
-<td style="text-align: center;"><img src="./figures/figures/pledgederivative_sig0.1.png" style="width:7cm;height:5cm" alt="image" /></td>
+<td style="text-align: center;"><img src="figures/pledgederivative_sig0.01.png" style="width:7cm;height:5cm" alt="image" /></td>
+<td style="text-align: center;"><img src="figures/pledgederivative_sig0.1.png" style="width:7cm;height:5cm" alt="image" /></td>
 </tr>
 <tr>
-<td style="text-align: center;"><img src="./figures/figures/pledgederivative_sig0.2.png" style="width:7cm;height:5cm" alt="image" /></td>
-<td style="text-align: center;"><img src="./figures/figures/pledgederivative_sig0.5.png" style="width:7cm;height:5cm" alt="image" /></td>
+<td style="text-align: center;"><img src="figures/pledgederivative_sig0.2.png" style="width:7cm;height:5cm" alt="image" /></td>
+<td style="text-align: center;"><img src="figures/pledgederivative_sig0.5.png" style="width:7cm;height:5cm" alt="image" /></td>
 </tr>
 </tbody>
 </table>
@@ -179,7 +179,7 @@ This could stabilize the participation of validators. If the active stake went d
 **Historical behavior.** In Figure <a href="#fandp" data-reference-type="ref" data-reference="fandp">4</a> we can see the value taken by both $`f_{i}`$ and $`p_{i}`$ during the last few years. We see that, as expected, both are lower than one. A bit more surprisingly, we can notice that the $`p`$ fraction is always lower than the $`f`$ fraction, therefore $`p`$ reduces rewards more than the specific pool incentives $`f`$ in every epoch. It is also the largest contributor to the volatility of aggregate rewards over time, with even an upward jump after epoch 325,[^4] and a smoother but bigger decline after epoch 400.
 
 <figure id="fandp">
-<img src="./figures/figures/f_and_p.png" />
+<img src="./figures/f_and_p.png" />
 <figcaption><strong>Reward adjustment f and p in practice</strong> The chart shows <span class="math inline">\(p\)</span> and <span class="math inline">\(f\)</span> as extracted from the actual level of rewards, beside the leading term in <span class="math inline">\(f\)</span>, <span class="math inline">\(\frac{1}{1+a_{0}}\approx77\%\)</span>, and the active stake component of <span class="math inline">\(p\)</span>.</figcaption>
 </figure>
 
@@ -218,7 +218,7 @@ where in square brackets we have the approximation of $`f`$, showing its terms f
 The historical evidence in Figure <a href="#fandp" data-reference-type="ref" data-reference="fandp">4</a> provides a striking confirmation of the goodness of the approximation just computed, and of the expectation that $`\frac{1}{1+\alpha}=\frac{1}{1+a_{0}}\approx77\%`$ is the dominant component of the $`f`$ adjustment. The other components of $`f`$, which should increase the rewards above the $`\frac{1}{1+a_{0}}`$ minimum, accounted for less than 2% in the last few years. This evidence that aggregate rewards were little higher than the amount that applies to pools with no pledge needs to be rooted in the distribution of the staking pools during the period. We analyze this in the following, keeping the analysis simple and based on few basic statistics.
 
 <figure id="fig_average_median_pools">
-<img src="./figures/figures/stakepledgemeanmedian.png" />
+<img src="figures/stakepledgemeanmedian.png" />
 <figcaption><strong>Average and Median Stake and Pledge.</strong> The figure covers the period from epoch 311-470.</figcaption>
 </figure>
 
@@ -242,10 +242,10 @@ of the average saturation level of the period, that ranges between 67M and 73M A
 <table>
 <tbody>
 <tr>
-<td style="text-align: center;"><img src="./figures/figures/stakebyrange.png" alt="image" /></td>
+<td style="text-align: center;"><img src="figures/stakebyrange.png" alt="image" /></td>
 </tr>
 <tr>
-<td style="text-align: center;"><img src="./figures/figures/pledgebyrange.png" alt="image" /></td>
+<td style="text-align: center;"><img src="figures/pledgebyrange.png" alt="image" /></td>
 </tr>
 </tbody>
 </table>
@@ -260,7 +260,7 @@ Conversely, larger pools are likely to hold more pledge both because they are mo
 
 **Estimates**. To keep the statistics sufficiently synthetic, we do not use information on how the pledge was distributed within a class, but just the relative pledge held in the class, over the stake held in the class. This does not tell us directly how much single pools own, but can allow us some estimates. If we want an overestimate of their fees, for example, we can assume that in every class all pools have the maximum stake. We will also assume they all have the same percentage pledge. This is likely to be an overestimate as well, since pledge has for all but the largest, saturated pools, a less than linear impact on rewards. We can even apply this logic to the time average of stake and pledge across the whole period, which is shown in the upper chart of Figure <a href="#fig_stakepledgebyclass" data-reference-type="ref" data-reference="fig_stakepledgebyclass">7</a>. The histogram corresponds to the following table:
 
-![image](./figures/figures/pools_histogram_table.png)
+![image](./figures/pools_histogram_table.png)
 
 This shows that on average, across the period the 0-7M class held 6.3% of the stake, while pledge in the class was on average 63.1% of the stake, while 7-14M pools held 4.8% of the stake and pledge was 2.5% of the stake, and so on. If we apply the above estimate logic to these data, we treat all the 0-7M pools as if they were 7M pool with 63.1% pledge, all 7-14M pools as if they were 14M pools with 4.8% stake and so on. Now for each class, we can compute the amount of rewards as a percentage of the maximum ($`\frac{1}{k}`$ of the total rewards). Since we know that the first class weighted for 6.3% of the stake, the second one for 7.1% and so on, then we can compute a weighted average. This is shown in the lower chart of Figure <a href="#fig_stakepledgebyclass" data-reference-type="ref" data-reference="fig_stakepledgebyclass">7</a>, where it is compared to the $`76.9\%%\ensuremath{=\frac{1}{1+a_{0}}}`$ earned by pools with no pledge. Because of the time average, this rough estimate is not necessarily an overestimate, yet we obtain $`78.6\%`$, which is consistent with the $`f_{i}`$ values in Figure <a href="#fandp" data-reference-type="ref" data-reference="fandp">4</a> showing that the aggregate incentive adjustment was within $`2\%`$ of the minimum.
 
@@ -268,10 +268,10 @@ This shows that on average, across the period the 0-7M class held 6.3% of the st
 <table>
 <tbody>
 <tr>
-<td style="text-align: center;"><img src="./figures/figures/average_by_class.png" alt="image" /></td>
+<td style="text-align: center;"><img src="./figures/average_by_class.png" alt="image" /></td>
 </tr>
 <tr>
-<td style="text-align: center;"><img src="./figures/figures/estimate_by_class.png" alt="image" /></td>
+<td style="text-align: center;"><img src="./figures/estimate_by_class.png" alt="image" /></td>
 </tr>
 </tbody>
 </table>
@@ -322,8 +322,8 @@ Thus, the proportion between the Treasury increase and the Rewards is not the on
 <table>
 <tbody>
 <tr>
-<td style="text-align: center;"><img src="./figures/figures/actualvssimplified_rewards_and_treasury.png" alt="image" /></td>
-<td style="text-align: center;"><img src="./figures/figures/actualvssimplified_trerew_ratio.png" alt="image" /></td>
+<td style="text-align: center;"><img src="./figures/actualvssimplified_rewards_and_treasury.png" alt="image" /></td>
+<td style="text-align: center;"><img src="./figures/actualvssimplified_trerew_ratio.png" alt="image" /></td>
 </tr>
 </tbody>
 </table>
@@ -335,7 +335,7 @@ Look at Figure <a href="#rewards_and_treasury" data-reference-type="ref" data-re
 A more precise description of the effect of rewards adjustments is given in Figure <a href="#rewards_and_treasury_1" data-reference-type="ref" data-reference="rewards_and_treasury_1">9</a>, that breaks down the effect for $`f_{i}`$ and $`p_{i}`$. We can see that without incentives, equivalent to setting $`f_{i}=1`$, but with the $`p_{i}`$ rescaling, rewards would be be nearer to the theoretical value of $`80\%`$, and even more if instead we had incentives $`f_{i}`$ but no $`p_{i}`$ rescaling. This is consistent with the results of the previous sections. If there were neither $`f_{i}`$ nor $`p_{i}`$ adjustments, the distribution would be very close to the theoretical values, in spite of some elements of variability, such as Fees or the treatment of unpaid rewards and unreturned deposits, that are rather small and not represented explicitly here.
 
 <figure id="rewards_and_treasury_1">
-<img src="./figures/figures/actualvssimplified_rewards_and_treasury_breakdown.png" />
+<img src="./figures/actualvssimplified_rewards_and_treasury_breakdown.png" />
 <figcaption><strong>Rewards and Treasury. Breakdown of Adjustments.</strong> </figcaption>
 </figure>
 
@@ -345,8 +345,8 @@ What happens to the amounts which are not paid out as Rewards? They stay with th
 <table>
 <tbody>
 <tr>
-<td style="text-align: center;"><img src="./figures/figures/actual_and_simplified_reserves.png" alt="image" /></td>
-<td style="text-align: center;"><img src="./figures/figures/actualvssimplified_eta.png" alt="image" /></td>
+<td style="text-align: center;"><img src="./figures/actual_and_simplified_reserves.png" alt="image" /></td>
+<td style="text-align: center;"><img src="./figures/actualvssimplified_eta.png" alt="image" /></td>
 </tr>
 </tbody>
 </table>
@@ -364,7 +364,7 @@ Taking into account also the impact of $`f_{i}`$ and $`p_{i}`$, the formula for 
 ```
 
 <figure id="actual and approximated reserves">
-<img src="./figures/figures/actual_and_approximated_reserves.png" />
+<img src="./figures/actual_and_approximated_reserves.png" />
 <figcaption><strong>Actual Reserves vs Near Approximations</strong></figcaption>
 </figure>
 
