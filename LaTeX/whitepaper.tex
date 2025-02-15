@@ -261,7 +261,7 @@ stake, rather than own stake.
 
 \begin{figure}[!ht]
 \hspace{-0.7cm}\hspace{-0.7cm}
-\includegraphics{figures/rewardswithstakepledgesimple}
+\includegraphics{../figures/rewardswithstakepledgesimple}
 \caption{\textbf{Rewards for different Stake and Pledge}. Stakes are represented
 as fractions of saturation level ($S/k$), Rewards as fractions of
 the maximum Reward ($1/k$ of the available rewards), Pledge as a
@@ -430,8 +430,8 @@ the maximum size above which rewards are terminated.
 \label{rewforstakepledge}\medskip{}
 
 \begin{tabular}{cc}
-\includegraphics[scale=0.65]{figures/stakepledge_all} & \includegraphics[scale=0.65]{figures/stakepledge_small}\tabularnewline
-\includegraphics[scale=0.65]{figures/stakepledge_mid} & \includegraphics[scale=0.65]{figures/stakepledge_large}\tabularnewline
+\includegraphics[scale=0.65]{../figures/stakepledge_all} & \includegraphics[scale=0.65]{../figures/stakepledge_small}\tabularnewline
+\includegraphics[scale=0.65]{../figures/stakepledge_mid} & \includegraphics[scale=0.65]{../figures/stakepledge_large}\tabularnewline
 \end{tabular}\caption{\textbf{Rewards with stake and pledge, 3D.} Again, Rewards are percentages
 of the reward of a fully pledged saturated pool, Stake are percentages
 of the stake of the saturated pool, while Pledge is the percentage
@@ -486,8 +486,8 @@ at at 1, that is 100\% pledge.
 \begin{figure}[!ht]
 \label{deriv}%
 \begin{tabular}{cc}
-\includegraphics[width=7cm,height=5cm]{figures/pledgederivative_sig0.01.png} & \includegraphics[width=7cm,height=5cm]{figures/pledgederivative_sig0.1.png}\tabularnewline
-\includegraphics[width=7cm,height=5cm]{figures/pledgederivative_sig0.2.png} & \includegraphics[width=7cm,height=5cm]{figures/pledgederivative_sig0.5.png}\tabularnewline
+\includegraphics[width=7cm,height=5cm]{../figures/pledgederivative_sig0.01.eps} & \includegraphics[width=7cm,height=5cm]{../figures/pledgederivative_sig0.1.eps}\tabularnewline
+\includegraphics[width=7cm,height=5cm]{../figures/pledgederivative_sig0.2.eps} & \includegraphics[width=7cm,height=5cm]{../figures/pledgederivative_sig0.5.eps}\tabularnewline
 \end{tabular}\caption{\textbf{Behavior of Rewards with pledge and its 1st derivative. }Showing
 different cases for different $\sigma_{\%},$ i.e. different stakes
 expressed as fixed percentages of saturation, showing in each chart
@@ -623,7 +623,7 @@ jump after epoch 325,\footnote{Jumps in staking are usually associated to large 
 exchanges, starting or terminating their participation in staking.} and a smoother but bigger decline after epoch 400.
 
 \begin{figure}[!ht]
-\includegraphics[scale=0.98]{./figures/f_and_p.png}\caption{\textbf{Reward adjustment f and p in practice }The chart shows $p$
+\includegraphics[scale=0.98]{../figures/f_and_p.eps}\caption{\textbf{Reward adjustment f and p in practice }The chart shows $p$
 and $f$ as extracted from the actual level of rewards, beside the
 leading term in $f$, $\frac{1}{1+a_{0}}\approx77\%$, and the active
 stake component of $p$.}
@@ -704,7 +704,7 @@ the staking pools during the period. We analyze this in the following,
 keeping the analysis simple and based on few basic statistics. 
 
 \begin{figure}[!ht]
-\includegraphics[scale=0.7]{figures/stakepledgemeanmedian}\caption{\textbf{Average and Median Stake and Pledge. }The figure covers the
+\includegraphics[scale=0.7]{../figures/stakepledgemeanmedian}\caption{\textbf{Average and Median Stake and Pledge. }The figure covers the
 period from epoch 311-470.}
 \label{fig_average_median_pools}
 \end{figure}
@@ -749,8 +749,8 @@ than saturation.
 \medskip{}
 
 \begin{tabular}{c}
-\includegraphics[scale=0.44]{figures/stakebyrange}\tabularnewline
-\includegraphics[scale=0.44]{figures/pledgebyrange}\tabularnewline
+\includegraphics[scale=0.44]{../figures/stakebyrange}\tabularnewline
+\includegraphics[scale=0.44]{../figures/pledgebyrange}\tabularnewline
 \end{tabular}\caption{\textbf{Distribution of Stake and Pledge across Stake Classes. }In
 the upper chart we see the stake in each class as a percentage of
 the stake in all classes. Below, we see the pledge in a class as a
@@ -802,7 +802,7 @@ time average of stake and pledge across the whole period, which is
 shown in the upper chart of Figure \ref{fig_stakepledgebyclass}.
 The histogram corresponds to the following table:
 
-\hspace{-0.85cm}\includegraphics[scale=0.66]{./figures/pools_histogram_table.png}
+\hspace{-0.85cm}\includegraphics[scale=0.66]{../figures/pools_histogram_table.eps}
 
 This shows that on average, across the period the 0-7M class held
 6.3\% of the stake, while pledge in the class was on average 63.1\%
@@ -824,8 +824,8 @@ of the minimum.
 \begin{figure}[H]
 \medskip{}
 \begin{tabular}{c}
-\includegraphics[scale=0.78]{./figures/average_by_class.png}\tabularnewline
-\includegraphics[scale=0.78]{./figures/estimate_by_class.png}\tabularnewline
+\includegraphics[scale=0.78]{../figures/average_by_class.eps}\tabularnewline
+\includegraphics[scale=0.78]{../figures/estimate_by_class.eps}\tabularnewline
 \end{tabular}\caption{\textbf{Stake and Pledge Statistics and Reward Estimates. }In the
 upper chart we see the time-averages of stake and pledge. Below, we
 see estimates of the reward percentages.}
@@ -914,7 +914,7 @@ rather than just $\left(1-\tau\right)$ changes the actual proportions.
 
 \hspace{-0.2cm}%
 \begin{tabular}{cc}
-\includegraphics[scale=0.46]{./figures/actualvssimplified_rewards_and_treasury.png} & \includegraphics[scale=0.46]{./figures/actualvssimplified_trerew_ratio.png}\tabularnewline
+\includegraphics[scale=0.46]{../figures/actualvssimplified_rewards_and_treasury.eps} & \includegraphics[scale=0.46]{../figures/actualvssimplified_trerew_ratio.eps}\tabularnewline
 \end{tabular}\caption{\textbf{Actual vs Theoretical Rewards and Treasury}}
 \label{rewards_and_treasury}
 \end{figure}
@@ -943,7 +943,7 @@ here.
 \begin{figure}[H]
 \smallskip{}
 
-\includegraphics[scale=0.88]{./figures/actualvssimplified_rewards_and_treasury_breakdown.png}
+\includegraphics[scale=0.88]{../figures/actualvssimplified_rewards_and_treasury_breakdown.eps}
 \caption{\textbf{Rewards and Treasury. Breakdown of Adjustments.} }
 \label{rewards_and_treasury_1}
 \end{figure}
@@ -966,7 +966,7 @@ as well leads only to an additional difference of little more than
 \begin{figure}[H]
 \hspace{-0.2cm}%
 \begin{tabular}{cc|}
-\includegraphics[scale=0.47]{./figures/actual_and_simplified_reserves.png} & \includegraphics[scale=0.47]{./figures/actualvssimplified_eta.png}\tabularnewline
+\includegraphics[scale=0.47]{../figures/actual_and_simplified_reserves.eps} & \includegraphics[scale=0.47]{../figures/actualvssimplified_eta.eps}\tabularnewline
 \end{tabular}
 \caption{\textbf{Actual Reserves vs Simplifications}}
 \label{actual_and_simplified_reserves}\medskip{}
@@ -990,7 +990,7 @@ returning to Reserves, including a component from fees $F_{i}$:
 
 \begin{figure}[ht]
 
-\includegraphics[scale=0.8]{"./figures/actual_and_approximated_reserves.png"}
+\includegraphics[scale=0.8]{"../figures/actual_and_approximated_reserves.png"}
 \caption{\textbf{Actual Reserves vs Near Approximations}}
 \label{actual and approximated reserves}\smallskip{}
 \end{figure}
