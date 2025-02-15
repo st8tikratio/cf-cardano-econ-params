@@ -1,7 +1,7 @@
 ### Cardano Economic Parameter Insights ⚖️
 
 <p align="left">
-<img alt="Release" src="https://github.com/your-username/cardano-economic-parameter-insights/actions/workflows/release.yaml/badge.svg?branch=main" />
+<img alt="Release" src="https://github.com/cardano-foundation/cardano-economic-parameter-insights/actions/workflows/release.yaml/badge.svg?branch=main" />
 <a href="https://opensource.org/licenses/MPL-2.0"><img alt="License" src="https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg" /></a>
 
 This repository provides a comprehensive analysis of *Cardano's economic parameters* and their impact on governance, staking incentives, and monetary policy. It includes a whitepaper by Professor Massimo Morini, which explores the interplay between key parameters such as *pledge influence*, *desired pool size*, and *monetary expansion*. The goal is to foster a deeper understanding of Cardano's tokenomics and provide tools for the community to make informed governance decisions.
@@ -61,3 +61,12 @@ The whitepaper provides several important findings:
 - **Monetary Policy**: The actual release of reserves is lower than the theoretical rate due to adjustments for pool performance and active stake. Rewards are distributed unevenly between treasury and staking rewards.
 - **Pool Distribution**: Stake and pledge are concentrated in larger pools, which impacts the effectiveness of decentralization incentives.
 - **Mathematical Modeling**: The whitepaper introduces stochastic models for projecting the long-term behavior of reserves and rewards.
+
+## 💙 Contributing
+All contributions are welcome! Please feel free to open a new thread [on the issue tracker](https://github.com/cardano-foundation/cardano-economic-parameter-insights/issues), [open a discussion](https://github.com/cardano-foundation/cardano-economic-parameter-insights/discussions), or submit a new pull request.
+
+Please read [Contributing](CONTRIBUTING.md) in advance. Thank you for contributing!
+
+## 📚 Additional Documents
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Security](SECURITY.md)
