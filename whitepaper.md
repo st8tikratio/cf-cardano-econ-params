@@ -389,12 +389,12 @@ In this paper we analyzed staking incentives, showing how the parameters for ple
 
 This paper is part of a larger research that extends some of the above analysis, including a more detailed investigation of the resource optimization problem faced by pools, taking into account also the parameters limiting pools choices, such as minimum costs and margins, and the long term impact of rewards. The analysis of the actual dynamics of variables such as reserves and rewards extends to measuring their statistical properties and modeling them using stochastic finite-difference or differential equations. This is facilitated by Cardano’s rigorous parameterization, as highlighted also in hoskinson(2018) [^hoskinson2018ama]. This topic is relevant for projecting and simulating the effect of governance choices on the long-term evolution of the system, properly accounting for probabilistic uncertainty.
 
-[^webdocgeneral]: Cardano Documentation 2025
-[^Kant2020Delegation]: P. Kant and L. Brunjes and D. Coutts Design Specification for Delegation and Incentives in Cardano 2020
-[^bruenjes2020rewardsharing]: Brünjes, Lars and Kiayias, Aggelos and Koutsoupias, Elias and Stouka, Aikaterini-Panagiota Reward Sharing Schemes for Stake Pools 2020
-[^cardano_cips]: Cardano Community Cardano Improvement Proposals 2024
-[^cardano_forum]: Cardano Forum 2025
-[^hoskinson2018ama]: Hoskinson, Charles Cardano Protocol Parameters 2021
+[^webdocgeneral]: 2025, Cardano, Accessed: 2025/01/24, docs.cardano.org, Documentation
+[^Kant2020Delegation]: 2020, P. Kant and L. Brunjes and D. Coutts, Version 1.21, Design Specification for Delegation and Incentives in Cardano, Technical Report
+[^bruenjes2020rewardsharing]: 2020, Reward Sharing Schemes for Stake Pools, Brünjes, Lars and Kiayias, Aggelos and Koutsoupias, Elias and Stouka, Aikaterini-Panagiota, IOHK
+[^cardano_cips]: 2024, Cardano Community, Accessed: 2024-06-30, cips.cardano.org, Cardano Improvement Proposals
+[^cardano_forum]: https://forum.cardano.org/, Forum, Cardano, 2025
+[^hoskinson2018ama]: https://www.youtube.com/watch?v=JJorRPk767s, Cardano Protocol Parameters, Hoskinson, Charles, 2021
 
 [^1]: I thank Markus Gufler, Fabian Bormann, Manvir Schneider, Giorgio Zinetti, Matthias Benkort, Alexander Moser, Laura Mattiucci, Nicolas Jacquemart, Frederik Gregaard and the whole Cardano Foundation for their support and helpful insight and discussion.
 

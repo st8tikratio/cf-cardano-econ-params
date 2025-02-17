@@ -79,10 +79,20 @@ function Pandoc(doc)
     local bibliography = parse_bibtex(content)
 
     for _, footnote in ipairs(footnotes) do
-        processed_footnotes[#processed_footnotes + 1] = string.format("[^%s]: %s %s %s", footnote, 
-            bibliography[footnote]["author"], 
-            bibliography[footnote]["title"],
-            bibliography[footnote]["year"])
+        local entry = bibliography[footnote]
+        local fields = {}
+        
+        for field, value in pairs(entry) do
+            if value and value ~= "" and field ~= "type" then
+                table.insert(fields, value)
+            end
+        end
+        
+        local citation_text = table.concat(fields, ", ")
+        
+        processed_footnotes[#processed_footnotes + 1] = string.format("[^%s]: %s", 
+            footnote, 
+            citation_text)
     end
 
     local footnote_block = pandoc.RawBlock("markdown", table.concat(processed_footnotes, "\n"))
