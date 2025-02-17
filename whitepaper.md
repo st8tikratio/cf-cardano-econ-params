@@ -2,7 +2,7 @@
 
 ### Massimo Morini[^1]
 
---
+---
 
 Decentralized Governance of Blockchain networks allows the participation of community members to crucial technical and economic decisions for the future of the ecosystem. In Cardano, the network technology and the monetary distribution are embedded in the code of the protocol, and depend on parameters that simplify decision-making and automate implementation. To make this work well in practice, the community needs as full an understanding of the system they are governing as possible. This means building an ecosystem of decentralized knowledge, analysis, and testing for the benefit of community members and representatives.
 
