@@ -1,6 +1,6 @@
 # Cardano Economic Parameters
 
-Massimo Morini[^1]
+### Massimo Morini[^1]
 
 --
 
@@ -26,15 +26,15 @@ While this section comes at the end of the analysis, community members will find
 
 # Pool Incentives for Stake and Pledge
 
-We start our analysis from the core mechanism of a blockchain ecosystem, the reward system for transaction validators. Cardano’s consensus algorithm is based on proof-of-stake, with stake pools aggregating own stake of pool operators, aka *pledge*, plus stake delegated by other participants that want to stake their ADA without running a node. Validation reward systems have at least two goals: making validation sustainable and economically competitive, and incentivize commitment to network security in a decentralized way. Cardano reaches this goal with a parametric system. The general description of the parameters is given in . More insights are given in . The derivation of part of the system as a Nash equilibrium can be found in . Related discussions can be found in .
+We start our analysis from the core mechanism of a blockchain ecosystem, the reward system for transaction validators. Cardano’s consensus algorithm is based on proof-of-stake, with stake pools aggregating own stake of pool operators, aka *pledge*, plus stake delegated by other participants that want to stake their ADA without running a node. Validation reward systems have at least two goals: making validation sustainable and economically competitive, and incentivize commitment to network security in a decentralized way. Cardano reaches this goal with a parametric system. The general description of the parameters is given in Cardano (2025a). More insights are given in Kant, Brunjes, and Coutts (2020). The derivation of part of the system as a Nash equilibrium can be found in Brünjes et al. (2020). Related discussions can be found in Cardano Community (2024; Cardano 2025b).
 
 ## Overview and Economics
 
 Here we focus on the effect of a change of the parameters $`k`$, called ’desired number of pools’, and $`a_{0}`$, called ’pool pledge influence’, on the rewards of a pool. Both have a strong impact on Cardano tokenomics. Parameter $`k`$ affects the impact on rewards of the size of the stake of a pool, that includes the own tokens pledged by pool operators, and the additional stake delegated to them. Parameter $`a_{0}`$ affects the impact of the pledge on rewards.
 
-**Desired number of pools**. Documentation in , that gives a high level overview of the workings of the system, explains that rewards increase with stake, but stop increasing once the stake reaches the point of *saturation*, given by the total possible stake (aka circulating supply $`S`$) divided by the desired number of pools $`k`$. This is aimed at penalizing pools that are larger than the desired size. We show in the following that the incentive system also penalizes pools that are smaller than the desired size. The size of this penalization depends on the interaction of $`a_{0}`$ and $`k`$.
+**Desired number of pools**. Documentation in Cardano (2025a), that gives a high level overview of the workings of the system, explains that rewards increase with stake, but stop increasing once the stake reaches the point of *saturation*, given by the total possible stake (aka circulating supply $`S`$) divided by the desired number of pools $`k`$. This is aimed at penalizing pools that are larger than the desired size. We show in the following that the incentive system also penalizes pools that are smaller than the desired size. The size of this penalization depends on the interaction of $`a_{0}`$ and $`k`$.
 
-**Pool Pledge Influence**. Documentation in explains that, if $`a_{0}`$ is zero, the pool reward is proportional to the pool’s fraction of the total possible stake (up to the point of saturation), while for larger values of $`a_{0}`$, the pledge becomes more important. We show here that the effect of $`a_{0}`$, and therefore the incentives to increase the pledge, are different for pools of different size, and they are aimed mostly at pools that already have a stake near to the desired saturation stake. Small pools receive little or no additional rewards for increasing the pledge, as shown in Figure <a href="#stakepledgesimple" data-reference-type="ref" data-reference="stakepledgesimple">1</a>. Increasing the pledge displays the commitment of pool operators and makes all pools more attractive for delegators, but in the reward system smaller pools are implicitly incentivized to increase their stake by increasing first delegated stake, rather than own stake.
+**Pool Pledge Influence**. Documentation in Cardano (2025a) explains that, if $`a_{0}`$ is zero, the pool reward is proportional to the pool’s fraction of the total possible stake (up to the point of saturation), while for larger values of $`a_{0}`$, the pledge becomes more important. We show here that the effect of $`a_{0}`$, and therefore the incentives to increase the pledge, are different for pools of different size, and they are aimed mostly at pools that already have a stake near to the desired saturation stake. Small pools receive little or no additional rewards for increasing the pledge, as shown in Figure <a href="#stakepledgesimple" data-reference-type="ref" data-reference="stakepledgesimple">1</a>. Increasing the pledge displays the commitment of pool operators and makes all pools more attractive for delegators, but in the reward system smaller pools are implicitly incentivized to increase their stake by increasing first delegated stake, rather than own stake.
 
 <figure id="stakepledgesimple">
 <img src="./figures/rewardswithstakepledgesimple.png" width="400" />
@@ -144,7 +144,7 @@ This means that rewards grow with $`\lambda_{\%}`$ until $`\lambda_{\%}=\lambda_
 
 # The effect of Stake definitions
 
-The incentives emerging from the application of <a href="#eq:incentive_formula" data-reference-type="eqref" data-reference="eq:incentive_formula">[eq:incentive_formula]</a> to all pools are not the last adjustment made to available resources before paying them out as rewards. As says, “the rewards that are produced by this formula are now adjusted by pool’s performance: we multiply by $`\frac{\beta}{\sigma_{a}}`$, where $`\beta`$ is the fraction of all blocks produced by the pool during the epoch and $`\sigma_{a}`$ is the stake delegated to the pool relative to the active stake ”. The more technical reference says “The actual rewards take the apparent performance into account, and are given by $`\bar{p}*f\left(\right)`$. Since $`\bar{p}=\beta/\sigma`$, this nearly amounts to replacing $`\sigma`$ by $`\beta`$ in $`f\left(\right)`$, i.e. to rewarding pools based on the number of blocks that they produced”.
+The incentives emerging from the application of <a href="#eq:incentive_formula" data-reference-type="eqref" data-reference="eq:incentive_formula">[eq:incentive_formula]</a> to all pools are not the last adjustment made to available resources before paying them out as rewards. As Cardano (2025a) says, “the rewards that are produced by this formula are now adjusted by pool’s performance: we multiply by $`\frac{\beta}{\sigma_{a}}`$, where $`\beta`$ is the fraction of all blocks produced by the pool during the epoch and $`\sigma_{a}`$ is the stake delegated to the pool relative to the active stake ”. The more technical reference Kant, Brunjes, and Coutts (2020) says “The actual rewards take the apparent performance into account, and are given by $`\bar{p}*f\left(\right)`$. Since $`\bar{p}=\beta/\sigma`$, this nearly amounts to replacing $`\sigma`$ by $`\beta`$ in $`f\left(\right)`$, i.e. to rewarding pools based on the number of blocks that they produced”.
 
 Let us define this final adjustment precisely. It consists of multiplying the output of the incentive formula for a pool $`x`$, with a stake of $`stake^{x}`$ ADA, by
 ``` math
@@ -201,7 +201,7 @@ Noticing that $`stake^{x}`$ cancels out, we get
 ``` math
 \frac{active}{S}\left[\frac{N^{x}}{N}\frac{1}{1+\alpha}+\frac{N^{x}}{N}\gamma\left(\alpha,z,\lambda^{x}\right)-\hat{\varepsilon}\left(\alpha,z,\lambda^{x}\right)\right],
 ```
-where $`\hat{\varepsilon}`$, which is $`\varepsilon`$ modified by the final adjustment, is still expected to be small or to nearly cancel out. Based on this, we can understand the approximation mentioned by “this nearly amounts to rewarding pools based on the number of blocks that they produced”. Adding the convergence of $`\frac{N^{x}}{N}`$ to $`\frac{stake^{x}}{active}`$ on average, we get the following approximation of the aggregate reward adjustment
+where $`\hat{\varepsilon}`$, which is $`\varepsilon`$ modified by the final adjustment, is still expected to be small or to nearly cancel out. Based on this, we can understand the approximation mentioned by Kant, Brunjes, and Coutts (2020) “this nearly amounts to rewarding pools based on the number of blocks that they produced”. Adding the convergence of $`\frac{N^{x}}{N}`$ to $`\frac{stake^{x}}{active}`$ on average, we get the following approximation of the aggregate reward adjustment
 ``` math
 \begin{aligned}
  & \sum_{x}\frac{active}{S}f\left(\alpha,z,\frac{stake^{x}}{active},\lambda^{x}\right)\\
@@ -280,7 +280,7 @@ However rough, this statistic support the assumption that the current level of o
 
 # Actual Reserves and Treasury Distribution
 
-The reward incentives have effects on Cardano Tokenomics that go beyond rewarding differently pools of different stake and pledge. The documentation in introduces Cardano monetary policy by describing the Reserves as the difference between the maximal supply of ADA and the circulating supply, and explaining that “during each epoch, a fixed but parameterizable percentage of the remaining reserve is taken from the reserve and used for epoch rewards and treasury”, and later on that “fees from every transaction from all blocks produced during every epoch go into a virtual ’pot’. A fixed percentage () of the remaining ADA reserves is added to that pot. A certain percentage () of the pot is sent to the treasury, and the rest is used as epoch rewards”.
+The reward incentives have effects on Cardano Tokenomics that go beyond rewarding differently pools of different stake and pledge. The documentation in Cardano (2025a) introduces Cardano monetary policy by describing the Reserves as the difference between the maximal supply of ADA and the circulating supply, and explaining that “during each epoch, a fixed but parameterizable percentage of the remaining reserve is taken from the reserve and used for epoch rewards and treasury”, and later on that “fees from every transaction from all blocks produced during every epoch go into a virtual ’pot’. A fixed percentage () of the remaining ADA reserves is added to that pot. A certain percentage () of the pot is sent to the treasury, and the rest is used as epoch rewards”.
 
 These parameters always had values $`\rho=0.003`$ and $`\tau=0.2`$. The above description leads to a simple mathematical representation of the Cardano Economic Dynamics. The Pot is funded by Fees $`F_{i}`$ and the regular release of Reserves $`\rho\mathrm{Reserve}`$,
 ``` math
@@ -387,7 +387,47 @@ Our analysis was conducted to gain a deeper understanding of Cardano economic pa
 
 In this paper we analyzed staking incentives, showing how the parameters for pledge influence and desired stake size have very differentiated effects on the rewards of pools with different features. We looked at the impact of stake calculations, and of the actual pool distribution, on rewards. Finally we analyzed how the dynamics of reserves, rewards and treasury is affected by incentives and stake calculations. We used simple math, economics, and data analysis, striving to keep complexity to a minimum. We have made the paper available to the community to foster discussion and improvements at https://github.com/cardano-foundation/cardano-economic-parameter-insights.
 
-This paper is part of a larger research that extends some of the above analysis, including a more detailed investigation of the resource optimization problem faced by pools, taking into account also the parameters limiting pools choices, such as minimum costs and margins, and the long term impact of rewards. The analysis of the actual dynamics of variables such as reserves and rewards extends to measuring their statistical properties and modeling them using stochastic finite-difference or differential equations. This is facilitated by Cardano’s rigorous parameterization, as highlighted also in . This topic is relevant for projecting and simulating the effect of governance choices on the long-term evolution of the system, properly accounting for probabilistic uncertainty.
+This paper is part of a larger research that extends some of the above analysis, including a more detailed investigation of the resource optimization problem faced by pools, taking into account also the parameters limiting pools choices, such as minimum costs and margins, and the long term impact of rewards. The analysis of the actual dynamics of variables such as reserves and rewards extends to measuring their statistical properties and modeling them using stochastic finite-difference or differential equations. This is facilitated by Cardano’s rigorous parameterization, as highlighted also in Hoskinson (2021). This topic is relevant for projecting and simulating the effect of governance choices on the long-term evolution of the system, properly accounting for probabilistic uncertainty.
+
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+
+<div id="ref-bruenjes2020rewardsharing" class="csl-entry">
+
+Brünjes, Lars, Aggelos Kiayias, Elias Koutsoupias, and Aikaterini-Panagiota Stouka. 2020. “Reward Sharing Schemes for Stake Pools.”
+
+</div>
+
+<div id="ref-webdocgeneral" class="csl-entry">
+
+Cardano. 2025a. “Documentation.” docs.cardano.org.
+
+</div>
+
+<div id="ref-cardano_forum" class="csl-entry">
+
+Cardano. 2025b. “Forum.” <https://forum.cardano.org/>.
+
+</div>
+
+<div id="ref-cardano_cips" class="csl-entry">
+
+Cardano Community. 2024. “Cardano Improvement Proposals.” <a href="cips.cardano.org" class="uri">cips.cardano.org</a>.
+
+</div>
+
+<div id="ref-hoskinson2018ama" class="csl-entry">
+
+Hoskinson, Charles. 2021. “Cardano Protocol Parameters.” <https://www.youtube.com/watch?v=JJorRPk767s>.
+
+</div>
+
+<div id="ref-Kant2020Delegation" class="csl-entry">
+
+Kant, P., L. Brunjes, and D. Coutts. 2020. “Design Specification for Delegation and Incentives in Cardano.” *Technical Report*.
+
+</div>
+
+</div>
 
 [^1]: I thank Markus Gufler, Fabian Bormann, Manvir Schneider, Giorgio Zinetti, Matthias Benkort, Alexander Moser, Laura Mattiucci, Nicolas Jacquemart, Frederik Gregaard and the whole Cardano Foundation for their support and helpful insight and discussion.
 
@@ -396,3 +436,4 @@ This paper is part of a larger research that extends some of the above analysis,
 [^3]: As shown at the end of this section, this term can even result in an increase in the pledge having a negative impact on the rewards.
 
 [^4]: Jumps in staking are usually associated to large players, such as exchanges, starting or terminating their participation in staking.
+
