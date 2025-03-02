@@ -6,6 +6,9 @@
 
 This repository provides a comprehensive analysis of *Cardano's economic parameters* and their impact on governance, staking incentives, and monetary policy. It includes a whitepaper by Professor Massimo Morini, which explores the interplay between key parameters such as *pledge influence*, *desired pool size*, and *monetary expansion*. The goal is to foster a deeper understanding of Cardano's tokenomics and provide tools for the community to make informed governance decisions.
 
+## Calculator Based On The Below Whitepaper
+- [HERE](https://github.com/st8tikratio/cf-cardano-reward-calculator)
+
 ## 📄 Whitepaper
 
 The whitepaper, authored by Professor Massimo Morini, is available in both LaTeX and Markdown formats. It provides a detailed analysis of:
